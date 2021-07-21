@@ -1,0 +1,27 @@
+h1 {
+font-size: 60px;
+font-weight: 900px;
+}
+
+h2 {
+    font-size: 50px;
+    }
+
+    h3 {
+        font-size: 40px;
+        }
+
+body {
+    font-family: copperplate;
+    
+    color: ghostwhite;
+    text-align: center;
+   background-image: url("https://cdn.escapistmagazine.com/media/global/images/library/deriv/735/735189.jpg");
+    background-repeat: no-repeat;
+    background-color: #330d00;
+   height: auto;
+   width: auto;
+    font-size: 30px;
+}
+
+
