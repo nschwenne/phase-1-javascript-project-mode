@@ -20,9 +20,9 @@ const secondEdit = addDash(firstEdit)
     if (secondEdit === creature.slug) {
     let li = document.createElement('li');
     let creatureOutput = [
-    "Name: " + creature.name + ", " + 
-    "Type: " + creature.type + ", " +  
-    "Size: " + creature.size + ", " + 
+    "Name: " + creature.name + " " + 
+    "Type: " + creature.type + " " +  
+    "Size: " + creature.size + " " + 
     "Alignment: " + creature.alignment + " " +
     "Challenge Rating: " + creature.challenge_rating
   ]
@@ -33,18 +33,17 @@ const secondEdit = addDash(firstEdit)
   removeButton.setAttribute("id", `${creature.name}removeButton`)
 removeButton.innerText = "X";
 li.append(removeButton);
-
 document.getElementById(`${creature.name}removeButton`).addEventListener('click', function() {
-  document.getElementById(creature.name).remove();
-}) 
+ document.getElementById(`${creature.name}`).remove()
 
+}) 
 } else {
   window.alert("Creature does not exist, please try again")
+
 } 
-})
+}) 
+document.getElementById("creatureForm").reset();
 }
-
-
 
 // this just creates a list when the click for creature list button is clicked
 document.getElementById("allMonstersButton").addEventListener('click', function() {
