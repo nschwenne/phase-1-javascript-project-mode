@@ -8,7 +8,7 @@ function addDash(inputData) {
 //For when the submit button is clicked, 
 document.querySelector("form").addEventListener("submit", createSearchedMonsterLi)
 
-// bring up data, puts name into results. 
+// bring up data, puts specified data into results. 
 function createSearchedMonsterLi() {
 event.preventDefault();
 let name = creatureName.value
@@ -20,10 +20,10 @@ const secondEdit = addDash(firstEdit)
     if (secondEdit === creature.slug) {
     let li = document.createElement('li');
     let creatureOutput = [
-    "Name: " + creature.name + " " + 
-    "Type: " + creature.type + " " +  
-    "Size: " + creature.size + " " + 
-    "Alignment: " + creature.alignment + " " +
+    "Name: " + creature.name + " |" + 
+    "Type: " + creature.type + " |" +  
+    "Size: " + creature.size + " |" + 
+    "Alignment: " + creature.alignment + " |" +
     "Challenge Rating: " + creature.challenge_rating
   ]
     li.innerText = creatureOutput;
@@ -36,7 +36,8 @@ li.append(removeButton);
 document.getElementById(`${creature.name}removeButton`).addEventListener('click', function() {
  document.getElementById(`${creature.name}`).remove()
 
-}) 
+})
+//If creature doesnt exits, this runs. 
 } else {
   window.alert("Creature does not exist, please try again")
 
@@ -60,7 +61,7 @@ document.getElementById("deleteMonsterListButton").addEventListener('click', fun
 });
 //shows alert when "click for creature List is clicked"
 
-// The below function shows a list of all available creatures
+// The below function shows a list of all available creatures. 
  function showAllMonsters(){
    if(count === 0) {
     window.alert("Please wait while content loads!");
@@ -73,10 +74,12 @@ document.getElementById("deleteMonsterListButton").addEventListener('click', fun
             document.getElementById('allAvailableMonsters').appendChild(li);
         })
        })
+       // if list is already available, this runs. 
       } else {
         window.alert("List already available")
       }
     } 
+    // this is ti keep track of the creature list, when its clicked  you cannont load the content untul the delete button is clicked. 
   let count = 0;
    let buttonCount = document.getElementById("allMonstersButton");
    buttonCount.onclick = function () {

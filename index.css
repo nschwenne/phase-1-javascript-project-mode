@@ -19,8 +19,9 @@ body {
    background-image: url("https://cdn.escapistmagazine.com/media/global/images/library/deriv/735/735189.jpg");
     background-repeat: no-repeat;
     background-color: #330d00;
+    background-size: cover;
    height: auto;
-   width: auto;
+   width: cover;
     font-size: 30px;
 }
 
